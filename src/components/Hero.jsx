@@ -17,17 +17,25 @@ export default function Hero({ onOpenReel, onCursorEnter, onCursorLeave }) {
         }}
       />
 
-      {/* 2. OVERSIZED WATERMARK TEXT (BEHIND ARTWORK) - ELEVATED WITH GAP FROM BOTTOM */}
-      <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.2 }}
-        className="absolute bottom-6 sm:bottom-8 lg:bottom-8 left-0 right-0 w-full z-[1] pointer-events-none select-none overflow-hidden px-4 sm:px-8 text-center"
-      >
-        <h2 className="font-syne text-[clamp(2.4rem,7.8vw,6.8rem)] font-extrabold uppercase tracking-[0.14em] leading-none text-[#E2D8C8] whitespace-nowrap inline-block subpixel-antialiased">
-          KROMA
-        </h2>
-      </motion.div>
+      {/* 2. OVERSIZED AUTO-SCROLLING MARQUEE WATERMARK (BEHIND ARTWORK) */}
+      <div className="absolute bottom-4 sm:bottom-6 lg:bottom-6 left-0 right-0 w-full z-[1] pointer-events-none select-none overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, x: ['0%', '-50%'] }}
+          transition={{
+            opacity: { duration: 1, delay: 0.2 },
+            x: { repeat: Infinity, ease: 'linear', duration: 28 },
+          }}
+          className="flex whitespace-nowrap w-max subpixel-antialiased"
+        >
+          <span className="font-syne text-[clamp(2.4rem,7.8vw,6.8rem)] font-extrabold uppercase tracking-[0.18em] leading-none text-[#E2D8C8] pr-6">
+            KROMA &nbsp;•&nbsp; KROMA &nbsp;•&nbsp; KROMA &nbsp;•&nbsp; KROMA &nbsp;•&nbsp; KROMA &nbsp;•&nbsp; KROMA &nbsp;•&nbsp;
+          </span>
+          <span className="font-syne text-[clamp(2.4rem,7.8vw,6.8rem)] font-extrabold uppercase tracking-[0.18em] leading-none text-[#E2D8C8] pr-6">
+            KROMA &nbsp;•&nbsp; KROMA &nbsp;•&nbsp; KROMA &nbsp;•&nbsp; KROMA &nbsp;•&nbsp; KROMA &nbsp;•&nbsp; KROMA &nbsp;•&nbsp;
+          </span>
+        </motion.div>
+      </div>
 
       {/* 3. MAIN HERO GRID (LEFT TEXT + RIGHT GRAPHIC COLLAGE) */}
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center my-auto relative z-10 pt-2 pb-4">
