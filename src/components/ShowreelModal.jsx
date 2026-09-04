@@ -26,7 +26,7 @@ export default function ShowreelModal({ isOpen, onClose }) {
           {/* Video / Reel Container */}
           <div className="relative w-full max-w-6xl aspect-video bg-zinc-900 border border-white/10 overflow-hidden shadow-2xl flex flex-col justify-between p-6">
             {/* Background Graphic / Simulated High Fashion Reel */}
-            <div className="absolute inset-0 bg-cover bg-center opacity-60 mix-blend-luminosity scale-105 animate-pulse" style={{ backgroundImage: `url('/images/hero_art.png')` }}>
+            <div className="absolute inset-0 bg-cover bg-center opacity-60 mix-blend-luminosity scale-105 animate-pulse" style={{ backgroundImage: `url('/images/hero_art.webp')` }}>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black" />
             </div>
 

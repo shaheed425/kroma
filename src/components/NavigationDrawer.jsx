@@ -8,47 +8,47 @@ const MENU_ITEMS = [
     title: 'HERO & MANIFESTO',
     href: '#hero',
     subtitle: 'NARRATIVE ENGINEERING',
-    image: '/images/hero_art.png',
+    image: '/images/hero_art.webp',
   },
   {
     id: '02',
     title: 'THE STRATEGY',
     href: '#manifesto',
     subtitle: 'STANDING OUT IS A STRATEGY',
-    image: '/images/work_2.png',
+    image: '/images/work_2.webp',
   },
   {
     id: '03',
     title: 'SERVICES INDEX',
     href: '#services',
     subtitle: 'PR, BRANDING, ADVERTISING & DATA',
-    image: '/images/work_1.png',
+    image: '/images/work_1.webp',
   },
   {
     id: '04',
     title: 'SELECTED WORKS',
     href: '#works',
     subtitle: 'CASE STUDIES & CAMPAIGNS',
-    image: '/images/work_3.png',
+    image: '/images/work_3.webp',
   },
   {
     id: '05',
     title: 'NOISE VS NARRATIVE',
     href: '#strategy',
     subtitle: 'OUR PROVEN FRAMEWORK',
-    image: '/images/hero_art.png',
+    image: '/images/hero_art.webp',
   },
   {
     id: '06',
     title: 'PRESS & CONTACT',
     href: '#contact',
     subtitle: 'START A CONVERSATION',
-    image: '/images/work_1.png',
+    image: '/images/work_1.webp',
   },
 ];
 
 export default function NavigationDrawer({ isOpen, onClose, onCursorEnter, onCursorLeave }) {
-  const [activeImage, setActiveImage] = useState('/images/hero_art.png');
+  const [activeImage, setActiveImage] = useState('/images/hero_art.webp');
 
   return (
     <AnimatePresence>

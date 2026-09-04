@@ -16,7 +16,7 @@ const SERVICES_DATA = [
       'Brand Voice',
       'Market Strategy'
     ],
-    image: '/images/hero_portrait.png',
+    image: '/images/hero_portrait.webp',
     tagline: 'Identity & Position Design',
     metric: '+240% Brand Equity',
     icon: Compass
@@ -34,7 +34,7 @@ const SERVICES_DATA = [
       'Performance Ads',
       'Conversion Optimization'
     ],
-    image: '/images/work_1.png',
+    image: '/images/work_1.webp',
     tagline: 'High-Conversion Digital Engine',
     metric: '4.8x ROAS Average',
     icon: Cpu
@@ -52,7 +52,7 @@ const SERVICES_DATA = [
       'Reputation Management',
       'Narrative Control'
     ],
-    image: '/images/work_2.png',
+    image: '/images/work_2.webp',
     tagline: 'Authority & Media Placement',
     metric: '2,400+ Press Features',
     icon: Award
@@ -70,7 +70,7 @@ const SERVICES_DATA = [
       'Media Planning',
       'Creative Execution'
     ],
-    image: '/images/work_3.png',
+    image: '/images/work_3.webp',
     tagline: 'Multi-Channel Campaign Architecture',
     metric: '18 Global Creative Awards',
     icon: Eye
@@ -88,7 +88,7 @@ const SERVICES_DATA = [
       'Visual Assets',
       'Brand Storytelling'
     ],
-    image: '/images/hero_artwork_bg.png',
+    image: '/images/hero_artwork_bg.webp',
     tagline: 'Visual & Narrative Content Studio',
     metric: '100% Studio Crafted',
     icon: Layers
@@ -106,7 +106,7 @@ const SERVICES_DATA = [
       'Conversion Analytics',
       'Growth Optimization'
     ],
-    image: '/images/hero_art.png',
+    image: '/images/hero_art.webp',
     tagline: 'Data-Backed Growth Optimization',
     metric: '100% Measurable Impact',
     icon: Radio

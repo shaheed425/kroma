@@ -77,7 +77,7 @@ export default function Manifesto({ onCursorEnter, onCursorLeave }) {
           <div className="lg:col-span-3 border border-black/10 bg-[#F8F8F6] p-2 relative group overflow-hidden shadow-lg">
             <div className="aspect-[3/4] overflow-hidden relative">
               <img
-                src="/images/work_2.png"
+                src="/images/work_2.webp"
                 alt="KROMA Brutalist Monolith Campaign"
                 className="w-full h-full object-cover contrast-110 group-hover:scale-105 transition-all duration-700"
               />

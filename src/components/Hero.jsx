@@ -6,7 +6,7 @@ export default function Hero({ onOpenReel, onCursorEnter, onCursorLeave }) {
   return (
     <section
       id="hero"
-      className="relative min-h-screen lg:h-screen lg:max-h-screen w-full pt-20 sm:pt-24 pb-14 sm:pb-16 lg:pb-2 px-4 sm:px-12 lg:px-16 flex flex-col justify-between overflow-hidden bg-[#F3EFEA] text-[#111111] select-none"
+      className="relative min-h-screen w-full pt-20 sm:pt-24 pb-20 sm:pb-24 lg:pb-28 px-4 sm:px-12 lg:px-16 flex flex-col justify-between overflow-hidden bg-[#F3EFEA] text-[#111111] select-none"
     >
       {/* 1. SUNLIGHT LEAF SHADOW OVERLAY */}
       <div 
@@ -17,12 +17,12 @@ export default function Hero({ onOpenReel, onCursorEnter, onCursorLeave }) {
         }}
       />
 
-      {/* 2. OVERSIZED WATERMARK TEXT (BEHIND ARTWORK) - ELEVATED IN WHITE SPACE ON MOBILE */}
+      {/* 2. OVERSIZED WATERMARK TEXT (BEHIND ARTWORK) - ELEVATED WITH GAP FROM BOTTOM */}
       <motion.div
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
-        className="absolute bottom-8 sm:bottom-6 lg:-bottom-4 left-0 right-0 w-full z-[1] pointer-events-none select-none overflow-hidden px-4 sm:px-8 text-center"
+        className="absolute bottom-6 sm:bottom-8 lg:bottom-8 left-0 right-0 w-full z-[1] pointer-events-none select-none overflow-hidden px-4 sm:px-8 text-center"
       >
         <h2 className="font-syne text-[clamp(2.4rem,7.8vw,6.8rem)] font-extrabold uppercase tracking-[0.14em] leading-none text-[#E2D8C8] whitespace-nowrap inline-block subpixel-antialiased">
           KROMA
@@ -35,16 +35,116 @@ export default function Hero({ onOpenReel, onCursorEnter, onCursorLeave }) {
         {/* LEFT COLUMN: EDITORIAL TYPOGRAPHY & CTAs */}
         <div className="lg:col-span-6 xl:col-span-6 flex flex-col justify-center space-y-4 sm:space-y-6 z-20">
 
-          {/* Main Headline */}
+          {/* Main Headline with Staggered Kinetic Mask Reveal & Calligraphic Underline */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.16,
+                  delayChildren: 0.1,
+                },
+              },
+            }}
             className="font-playfair text-[clamp(2.1rem,8vw,5.2rem)] font-medium text-[#111111] leading-[1.04] tracking-tight"
           >
-            Make Brands <br />
-            <span className="italic text-[#C82323] font-normal">Impossible</span> <br />
-            To Ignore<span className="text-[#C82323] font-normal">.</span>
+            {/* Line 1: Make Brands */}
+            <span className="block overflow-hidden py-0.5">
+              <motion.span
+                variants={{
+                  hidden: { y: '100%', opacity: 0 },
+                  visible: {
+                    y: '0%',
+                    opacity: 1,
+                    transition: { duration: 0.85, ease: [0.16, 1, 0.3, 1] },
+                  },
+                }}
+                className="inline-block"
+              >
+                Make Brands
+              </motion.span>
+            </span>
+
+            {/* Line 2: Impossible (Italic Red Accent with Dynamic SVG Underline Draw & Interactive Tilt) */}
+            <span className="block overflow-hidden py-0.5 relative">
+              <motion.span
+                variants={{
+                  hidden: { y: '100%', opacity: 0, scale: 0.96 },
+                  visible: {
+                    y: '0%',
+                    opacity: 1,
+                    scale: 1,
+                    transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] },
+                  },
+                }}
+                whileHover={{ scale: 1.03, rotate: -1 }}
+                onMouseEnter={() => onCursorEnter && onCursorEnter('BOLD')}
+                onMouseLeave={() => onCursorLeave && onCursorLeave()}
+                className="italic text-[#C82323] font-normal inline-block relative cursor-pointer select-none transition-transform duration-300"
+              >
+                Impossible
+                {/* Animated Hand-drawn Calligraphic SVG Underline */}
+                <motion.svg
+                  className="absolute -bottom-1.5 left-0 w-full h-[14px] overflow-visible text-[#C82323] pointer-events-none"
+                  viewBox="0 0 240 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  initial="hidden"
+                  animate="visible"
+                >
+                  <motion.path
+                    d="M 3 14 C 45 4, 115 16, 237 6"
+                    stroke="currentColor"
+                    strokeWidth="3.5"
+                    strokeLinecap="round"
+                    variants={{
+                      hidden: { pathLength: 0, opacity: 0 },
+                      visible: {
+                        pathLength: 1,
+                        opacity: 0.9,
+                        transition: {
+                          pathLength: { delay: 0.65, duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+                          opacity: { delay: 0.65, duration: 0.2 },
+                        },
+                      },
+                    }}
+                  />
+                </motion.svg>
+              </motion.span>
+            </span>
+
+            {/* Line 3: To Ignore. */}
+            <span className="block overflow-hidden py-0.5">
+              <motion.span
+                variants={{
+                  hidden: { y: '100%', opacity: 0 },
+                  visible: {
+                    y: '0%',
+                    opacity: 1,
+                    transition: { duration: 0.85, ease: [0.16, 1, 0.3, 1] },
+                  },
+                }}
+                className="inline-block"
+              >
+                To Ignore
+                <motion.span
+                  variants={{
+                    hidden: { opacity: 0, scale: 0 },
+                    visible: {
+                      opacity: 1,
+                      scale: 1,
+                      transition: { delay: 0.75, duration: 0.4, type: 'spring', stiffness: 350 },
+                    },
+                  }}
+                  className="inline-block text-[#C82323] font-normal ml-0.5"
+                >
+                  .
+                </motion.span>
+              </motion.span>
+            </span>
           </motion.h1>
 
           {/* Subheading Paragraph */}
@@ -90,12 +190,12 @@ export default function Hero({ onOpenReel, onCursorEnter, onCursorLeave }) {
         </div>
 
         {/* RIGHT COLUMN: LAYERED EDITORIAL GRAPHIC COLLAGE (MATCHING USER REFERENCE IMAGE EXACTLY ON MOBILE & DESKTOP) */}
-        <div className="lg:col-span-6 xl:col-span-6 flex items-center justify-center lg:justify-end relative min-h-[360px] sm:min-h-[480px] lg:min-h-[520px] w-full pt-2 lg:pt-0 overflow-visible">
+        <div className="lg:col-span-6 xl:col-span-6 flex items-center justify-center lg:justify-end relative min-h-[360px] sm:min-h-[480px] lg:min-h-[520px] w-full pt-3 sm:pt-4 lg:pt-0 overflow-visible">
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-[340px] sm:max-w-[520px] h-[360px] sm:h-[480px] lg:h-[510px] flex items-center justify-center mx-auto lg:mr-0"
+            className="relative w-full max-w-[340px] sm:max-w-[520px] h-[360px] sm:h-[480px] lg:h-[510px] flex items-center justify-center mx-auto lg:mr-0 translate-y-0 lg:-translate-y-[20px] lg:-translate-x-[10px]"
           >
             {/* 1. Background Off-White Panel */}
             <div className="absolute right-[0px] sm:right-[25px] top-[0px] w-[180px] sm:w-[240px] h-[250px] sm:h-[340px] bg-[#EAE4DA] z-[1] pointer-events-none shadow-sm" />
@@ -106,7 +206,7 @@ export default function Hero({ onOpenReel, onCursorEnter, onCursorLeave }) {
             {/* 3. Top-Right Staircase Card */}
             <div className="absolute right-[0px] sm:right-[25px] top-[15px] sm:top-[25px] w-[140px] sm:w-[185px] h-[140px] sm:h-[185px] z-[3] shadow-lg overflow-hidden border border-black/10">
               <img
-                src="/images/hero_staircase.png"
+                src="/images/hero_staircase.webp"
                 alt="Architectural Staircase"
                 className="w-full h-full object-cover filter contrast-[1.05]"
               />
@@ -142,7 +242,7 @@ export default function Hero({ onOpenReel, onCursorEnter, onCursorLeave }) {
               {/* Right Photo Box */}
               <div className="w-[55%] relative overflow-hidden bg-zinc-900">
                 <img
-                  src="/images/hero_chair.png"
+                  src="/images/hero_chair.webp"
                   alt="Minimalist Interior"
                   className="w-full h-full object-cover filter contrast-[1.05]"
                 />
@@ -161,7 +261,7 @@ export default function Hero({ onOpenReel, onCursorEnter, onCursorLeave }) {
             {/* 7. FOREGROUND CUTOUT PORTRAIT OF MAN - ANCHORED TO FAR LEFT MATCHING REFERENCE IMAGE 2 EXACTLY */}
             <div className="absolute left-[-40px] xs:left-[-30px] sm:left-auto sm:right-[170px] lg:right-[190px] bottom-0 w-[230px] sm:w-[360px] lg:w-[400px] z-[10] pointer-events-none select-none">
               <img
-                src="/images/hero_man_transparent_left.png"
+                src="/images/hero_man_transparent_left.webp"
                 alt="Kroma Media Hero Visual"
                 className="w-full h-auto object-contain object-bottom filter contrast-105"
                 style={{
