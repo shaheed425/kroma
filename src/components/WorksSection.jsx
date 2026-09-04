@@ -104,15 +104,15 @@ export default function WorksSection() {
   };
 
   return (
-    <section id="works" className="py-14 sm:py-16 md:py-20 px-6 md:px-12 lg:px-16 bg-[#F7F7F5] text-[#111111] border-b border-black/10 relative select-none">
+    <section id="works" className="py-14 sm:py-16 md:py-20 px-6 md:px-12 lg:px-16 bg-black text-white border-b border-white/10 relative select-none">
       <div className="max-w-7xl mx-auto space-y-6">
         
         {/* TOP CAROUSEL ARROW CONTROLS */}
-        <div className="flex items-center justify-end border-b border-black/10 pb-3">
+        <div className="flex items-center justify-end border-b border-white/10 pb-3">
           <div className="flex items-center space-x-2.5">
             <button
               onClick={() => handleScroll('left')}
-              className="w-9 h-9 rounded-none border border-black/20 bg-white hover:bg-[#C1121F] hover:border-[#C1121F] hover:text-white flex items-center justify-center text-zinc-800 transition-all shadow-sm active:scale-95 cursor-pointer"
+              className="w-9 h-9 rounded-none border border-white/20 bg-zinc-900 hover:bg-[#C1121F] hover:border-[#C1121F] hover:text-white flex items-center justify-center text-zinc-200 transition-all shadow-sm active:scale-95 cursor-pointer"
             >
               <ChevronLeft size={18} />
             </button>
@@ -131,12 +131,12 @@ export default function WorksSection() {
           {/* LEFT SIDE: EDITORIAL HEADING & DESCRIPTION */}
           <div className="lg:col-span-4 flex flex-col justify-between space-y-5">
             <div className="space-y-3.5">
-              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] tracking-tight uppercase leading-tight">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight uppercase leading-tight">
                 FEATURED <br />
                 CAMPAIGNS<span className="text-[#C1121F]">.</span>
               </h2>
 
-              <p className="font-sans text-xs sm:text-sm text-zinc-600 font-normal leading-relaxed max-w-sm">
+              <p className="font-sans text-xs sm:text-sm text-zinc-400 font-normal leading-relaxed max-w-sm">
                 Strategic campaigns, digital experiences, and brand stories crafted to move people, build brands, and drive real results.
               </p>
             </div>
@@ -145,7 +145,7 @@ export default function WorksSection() {
             <div className="pt-1">
               <a
                 href="#works"
-                className="inline-flex items-center space-x-2 font-sans text-xs font-bold uppercase tracking-wider text-zinc-800 border-b border-black/30 pb-0.5 hover:text-[#C1121F] hover:border-[#C1121F] transition-colors group"
+                className="inline-flex items-center space-x-2 font-sans text-xs font-bold uppercase tracking-wider text-white border-b border-white/30 pb-0.5 hover:text-[#C1121F] hover:border-[#C1121F] transition-colors group"
               >
                 <span>VIEW ALL PROJECTS</span>
                 <ArrowRight size={14} className="text-[#C1121F] group-hover:translate-x-1 transition-transform" />
@@ -224,7 +224,7 @@ export default function WorksSection() {
                     className={`h-9 sm:h-10 px-4 font-bold uppercase tracking-wider rounded-none border transition-all duration-300 cursor-pointer whitespace-nowrap ${
                       isActive
                         ? 'bg-[#C1121F] border-[#C1121F] text-white shadow-sm'
-                        : 'bg-white border-black/20 text-zinc-800 hover:border-[#C1121F] hover:text-[#C1121F]'
+                        : 'bg-zinc-900 border-white/20 text-zinc-300 hover:border-[#C1121F] hover:text-[#C1121F]'
                     }`}
                   >
                     {cat.label}
@@ -248,7 +248,7 @@ export default function WorksSection() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
             onClick={() => setActiveModalProject(null)}
-            className="fixed inset-0 z-50 bg-black/75 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 lg:p-8"
+            className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 lg:p-8"
           >
             <motion.div
               ref={modalContentRef}
@@ -258,29 +258,29 @@ export default function WorksSection() {
               exit={{ scale: 0.96, opacity: 0, y: 20 }}
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-4xl max-h-[85vh] overflow-y-auto bg-[#F7F7F5] border border-black/20 p-6 sm:p-8 lg:p-10 my-auto text-black space-y-6 sm:space-y-8 shadow-2xl rounded-none focus:outline-none scroll-smooth"
+              className="relative w-full max-w-4xl max-h-[85vh] overflow-y-auto bg-zinc-950 border border-white/20 p-6 sm:p-8 lg:p-10 my-auto text-white space-y-6 sm:space-y-8 shadow-2xl rounded-none focus:outline-none scroll-smooth"
             >
               {/* Modal Close Button */}
               <button
                 onClick={() => setActiveModalProject(null)}
-                className="absolute top-5 right-5 sm:top-6 sm:right-6 flex items-center space-x-2 text-zinc-600 hover:text-[#C1121F] transition-colors font-mono-spec text-xs uppercase cursor-pointer z-10"
+                className="absolute top-5 right-5 sm:top-6 sm:right-6 flex items-center space-x-2 text-zinc-400 hover:text-[#C1121F] transition-colors font-mono-spec text-xs uppercase cursor-pointer z-10"
               >
                 <span>CLOSE CASE STUDY</span>
-                <div className="w-8 h-8 rounded-none border border-black/20 bg-white flex items-center justify-center">
+                <div className="w-8 h-8 rounded-none border border-white/20 bg-zinc-900 flex items-center justify-center text-white">
                   <X size={16} />
                 </div>
               </button>
 
               {/* Case Header */}
-              <div className="space-y-2 pt-2 border-b border-black/10 pb-5">
+              <div className="space-y-2 pt-2 border-b border-white/10 pb-5">
                 <div className="flex items-center space-x-3 font-mono-spec text-xs text-[#C1121F] font-bold">
                   <span>{activeModalProject.category}</span>
                   <span>//</span>
-                  <span className="text-zinc-600">{activeModalProject.client}</span>
+                  <span className="text-zinc-400">{activeModalProject.client}</span>
                   <span>//</span>
                   <span className="text-zinc-500">{activeModalProject.year}</span>
                 </div>
-                <h2 className="font-display text-2xl sm:text-4xl lg:text-5xl font-black uppercase text-[#111111]">
+                <h2 className="font-display text-2xl sm:text-4xl lg:text-5xl font-black uppercase text-white">
                   {activeModalProject.title}
                 </h2>
               </div>

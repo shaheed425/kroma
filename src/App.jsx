@@ -101,7 +101,7 @@ export default function App() {
   const handleCursorLeave = () => setCursorState({ type: '', text: '' });
 
   return (
-    <div className="relative min-h-screen bg-[#F8F8F6] text-[#0A0A0B] selection:bg-[#C1121F] selection:text-white font-sans antialiased overflow-x-hidden">
+    <div className="relative min-h-screen bg-black text-white selection:bg-[#C1121F] selection:text-white font-sans antialiased overflow-x-hidden">
       {/* Precision Custom Cursor */}
       <CustomCursor cursorState={cursorState} />
 

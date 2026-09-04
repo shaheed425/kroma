@@ -53,8 +53,8 @@ export default function Navbar({ onCursorEnter, onCursorLeave }) {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 px-6 md:px-12 py-5 ${
           scrolled
-            ? 'bg-[#F7F7F5]/90 backdrop-blur-md border-b border-black/[0.06] py-3.5'
-            : 'bg-transparent'
+            ? 'bg-[#F7F7F5]/90 backdrop-blur-md border-b border-black/[0.06] text-[#111111] py-3.5'
+            : 'bg-transparent text-white'
         }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between relative">
@@ -63,7 +63,9 @@ export default function Navbar({ onCursorEnter, onCursorLeave }) {
             href="#hero"
             className="flex flex-col group cursor-pointer shrink-0 select-none"
           >
-            <span className="font-syne text-xl md:text-2xl font-extrabold tracking-tighter text-[#111111] leading-none uppercase">
+            <span className={`font-syne text-xl md:text-2xl font-extrabold tracking-tighter leading-none uppercase transition-colors duration-300 ${
+              scrolled ? 'text-[#111111]' : 'text-white'
+            }`}>
               KROMA
             </span>
             <span className="font-mono-spec text-[9px] tracking-[0.25em] text-[#C1121F] font-bold uppercase leading-tight">
@@ -76,9 +78,13 @@ export default function Navbar({ onCursorEnter, onCursorLeave }) {
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle navigation menu"
-              className="flex items-center space-x-2.5 group cursor-pointer select-none text-[#111111] transition-opacity hover:opacity-80"
+              className={`flex items-center space-x-2.5 group cursor-pointer select-none transition-all hover:opacity-80 ${
+                scrolled ? 'text-[#111111]' : 'text-white'
+              }`}
             >
-              <span className="w-8 h-8 rounded-full border border-black/40 flex items-center justify-center group-hover:border-black transition-colors bg-transparent">
+              <span className={`w-8 h-8 rounded-full border flex items-center justify-center transition-colors bg-transparent ${
+                scrolled ? 'border-black/40 group-hover:border-black' : 'border-white/40 group-hover:border-white'
+              }`}>
                 {menuOpen ? <X size={15} /> : <Menu size={15} strokeWidth={2.2} />}
               </span>
               <span className="text-xs font-bold tracking-widest uppercase">MENU</span>

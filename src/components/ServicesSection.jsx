@@ -134,7 +134,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="py-24 md:py-32 px-6 md:px-12 lg:px-16 bg-[#F7F7F5] text-[#111111] border-b border-black/10 relative overflow-hidden select-none"
+      className="py-24 md:py-32 px-6 md:px-12 lg:px-16 bg-black text-white border-b border-white/10 relative overflow-hidden select-none"
     >
       <div className="max-w-7xl mx-auto space-y-12 md:space-y-16">
         
@@ -144,15 +144,15 @@ export default function ServicesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col md:flex-row md:items-end justify-between border-b border-black/10 pb-8 gap-4"
+          className="flex flex-col md:flex-row md:items-end justify-between border-b border-white/10 pb-8 gap-4"
         >
           <div>
-            <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] tracking-tight uppercase leading-tight">
+            <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight uppercase leading-tight">
               WE MAKE BRANDS <br className="hidden sm:inline" />
               HARD TO IGNORE<span className="text-[#E51B23]">.</span>
             </h2>
           </div>
-          <div className="max-w-md font-sans text-sm text-zinc-600 font-normal leading-relaxed">
+          <div className="max-w-md font-sans text-sm text-zinc-400 font-normal leading-relaxed">
             Strategy, creativity, media and performance — connected into a single synchronized growth engine.
           </div>
         </motion.div>
@@ -181,7 +181,7 @@ export default function ServicesSection() {
 
                 {/* Title & Headline (Clean Bold Editorial Sans-Serif) */}
                 <div className="space-y-3">
-                  <h3 className="font-sans text-3xl sm:text-4xl font-black text-[#111111] uppercase tracking-tight leading-none">
+                  <h3 className="font-sans text-3xl sm:text-4xl font-black text-white uppercase tracking-tight leading-none">
                     {activeService.title}
                   </h3>
                   <p className="font-sans text-lg sm:text-xl font-bold text-[#E51B23] leading-snug">
@@ -190,16 +190,16 @@ export default function ServicesSection() {
                 </div>
 
                 {/* Description */}
-                <p className="font-sans text-base text-zinc-600 leading-relaxed font-normal max-w-md">
+                <p className="font-sans text-sm text-zinc-300 leading-relaxed font-normal">
                   {activeService.description}
                 </p>
 
-                {/* Core Capabilities (Minimal Single Line with Dots) */}
-                <div className="pt-5 border-t border-black/10 space-y-2">
-                  <p className="font-sans text-[11px] font-bold uppercase tracking-widest text-zinc-400">
+                {/* Core Capabilities */}
+                <div className="space-y-2 border-t border-white/10 pt-4">
+                  <p className="font-mono-spec text-[10px] font-bold text-[#E51B23] uppercase tracking-widest">
                     CORE CAPABILITIES
                   </p>
-                  <p className="font-sans text-xs font-bold text-zinc-800 tracking-wider leading-relaxed">
+                  <p className="font-sans text-xs font-bold text-zinc-300 tracking-wider leading-relaxed">
                     {activeService.capabilitiesLine}
                   </p>
                 </div>
@@ -208,7 +208,7 @@ export default function ServicesSection() {
                 <div className="pt-4">
                   <a
                     href="#contact"
-                    className="inline-flex items-center space-x-3 text-[#111111] hover:text-[#E51B23] font-sans text-sm font-bold tracking-wider uppercase transition-colors group"
+                    className="inline-flex items-center space-x-3 text-white hover:text-[#E51B23] font-sans text-sm font-bold tracking-wider uppercase transition-colors group"
                   >
                     <span>GET STARTED</span>
                     <ArrowRight size={16} className="text-[#E51B23] group-hover:translate-x-1.5 transition-transform" />
@@ -224,7 +224,7 @@ export default function ServicesSection() {
           {/* ========================================================= */}
           <div className="lg:col-span-3 hidden lg:flex flex-col justify-center space-y-3.5 px-2 relative z-20">
             {/* Small Interaction Label Above Service List */}
-            <p className="font-sans text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-2 pl-1">
+            <p className="font-sans text-[10px] font-bold uppercase tracking-widest text-zinc-500 mb-2 pl-1">
               SELECT A SERVICE
             </p>
 
@@ -240,7 +240,7 @@ export default function ServicesSection() {
                   <div className="flex items-center space-x-3">
                     <span
                       className={`font-mono-spec text-xs transition-colors duration-300 ${
-                        isActive ? 'text-[#E51B23] font-bold' : 'text-zinc-400 group-hover:text-zinc-700'
+                        isActive ? 'text-[#E51B23] font-bold' : 'text-zinc-500 group-hover:text-zinc-300'
                       }`}
                     >
                       {service.id}
@@ -248,8 +248,8 @@ export default function ServicesSection() {
                     <span
                       className={`font-sans text-sm uppercase tracking-wider transition-all duration-300 ${
                         isActive
-                          ? 'text-[#111111] font-black translate-x-1'
-                          : 'text-zinc-500 font-semibold group-hover:text-zinc-900'
+                          ? 'text-white font-black translate-x-1'
+                          : 'text-zinc-400 font-semibold group-hover:text-white'
                       }`}
                     >
                       {service.shortName}
@@ -262,14 +262,14 @@ export default function ServicesSection() {
                       className={`h-[2px] transition-all duration-300 ${
                         isActive
                           ? 'w-10 sm:w-12 bg-[#E51B23]'
-                          : 'w-5 sm:w-7 bg-black/15 group-hover:bg-black/30 group-hover:w-9'
+                          : 'w-5 sm:w-7 bg-white/15 group-hover:bg-white/30 group-hover:w-9'
                       }`}
                     />
                     <span
                       className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                         isActive
                           ? 'bg-[#E51B23] scale-125 shadow-[0_0_8px_rgba(229,27,35,0.6)]'
-                          : 'bg-black/20 group-hover:bg-black/40'
+                          : 'bg-white/20 group-hover:bg-white/40'
                       }`}
                     />
                   </div>
@@ -283,7 +283,7 @@ export default function ServicesSection() {
           {/* ========================================================= */}
           <div className="lg:col-span-4 relative h-[360px] sm:h-[460px] lg:h-[530px] flex items-center justify-center overflow-hidden lg:overflow-visible px-2 lg:pl-0">
             
-            {/* Subtle Light Gray Semicircular Track SVG Line (Facing Left) */}
+            {/* Subtle Semicircular Track SVG Line */}
             <svg
               className="absolute inset-0 w-full h-full pointer-events-none hidden lg:block"
               viewBox="0 0 400 530"
@@ -291,13 +291,13 @@ export default function ServicesSection() {
             >
               <path
                 d="M 330 35 A 230 230 0 0 0 330 495"
-                stroke="rgba(0,0,0,0.08)"
+                stroke="rgba(255,255,255,0.1)"
                 strokeWidth="1.5"
                 strokeDasharray="4 6"
               />
               <path
                 d="M 330 135 A 230 230 0 0 0 330 395"
-                stroke="rgba(229,27,35,0.2)"
+                stroke="rgba(229,27,35,0.3)"
                 strokeWidth="2.5"
               />
             </svg>
@@ -361,7 +361,7 @@ export default function ServicesSection() {
                     className={`absolute cursor-pointer overflow-hidden rounded-md w-[240px] sm:w-[260px] aspect-[4/3] border transform-gpu will-change-transform select-none touch-manipulation transition-shadow duration-300 ${
                       isActive
                         ? 'border-[#E51B23] shadow-[0_20px_40px_rgba(229,27,35,0.3)] ring-1 ring-[#E51B23]'
-                        : 'border-black/15 shadow-md hover:border-black/35'
+                        : 'border-white/15 shadow-md hover:border-white/35'
                     }`}
                   >
                     {/* Edge-to-Edge Full Card Image */}
@@ -412,7 +412,7 @@ export default function ServicesSection() {
         <div className="lg:hidden flex items-center justify-between gap-2 pt-2 pb-2">
           <button
             onClick={() => handleSelectService((activeIndex - 1 + 6) % 6)}
-            className="p-3 rounded-full bg-white border border-black/15 text-zinc-800 hover:text-[#E51B23] shadow-sm active:scale-95 transition-all shrink-0 touch-manipulation"
+            className="p-3 rounded-full bg-zinc-900 border border-white/15 text-zinc-200 hover:text-[#E51B23] shadow-sm active:scale-95 transition-all shrink-0 touch-manipulation"
             aria-label="Previous Service"
           >
             <ChevronLeft size={18} />
@@ -428,7 +428,7 @@ export default function ServicesSection() {
                   className={`px-3.5 py-2 rounded-sm font-sans text-xs font-bold uppercase whitespace-nowrap transition-all touch-manipulation ${
                     isActive
                       ? 'bg-[#E51B23] text-white shadow-md scale-105'
-                      : 'bg-white border border-black/10 text-zinc-700 hover:bg-black/5'
+                      : 'bg-zinc-900 border border-white/10 text-zinc-300 hover:bg-zinc-800'
                   }`}
                 >
                   {service.id} {service.shortName}
@@ -439,7 +439,7 @@ export default function ServicesSection() {
 
           <button
             onClick={() => handleSelectService((activeIndex + 1) % 6)}
-            className="p-3 rounded-full bg-white border border-black/15 text-zinc-800 hover:text-[#E51B23] shadow-sm active:scale-95 transition-all shrink-0 touch-manipulation"
+            className="p-3 rounded-full bg-zinc-900 border border-white/15 text-zinc-200 hover:text-[#E51B23] shadow-sm active:scale-95 transition-all shrink-0 touch-manipulation"
             aria-label="Next Service"
           >
             <ChevronRight size={18} />
