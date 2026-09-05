@@ -14,7 +14,7 @@ export default function Hero({ onOpenReel, onCursorEnter, onCursorLeave }) {
         {/* LEFT COLUMN: EDITORIAL TYPOGRAPHY & CTAs */}
         <div className="lg:col-span-7 flex flex-col justify-center z-20">
 
-          {/* Top Tagline / Eyebrow Row (With Mobile Top-Right Vertical Hook) */}
+          {/* Top Tagline / Eyebrow Row */}
           <div className="flex items-start justify-between mb-[clamp(14px,3vw,22px)]">
             <motion.div
               initial={{ opacity: 0, y: 12 }}
@@ -23,19 +23,6 @@ export default function Hero({ onOpenReel, onCursorEnter, onCursorLeave }) {
               className="font-mono-spec text-[11px] sm:text-xs font-semibold tracking-[0.25em] text-zinc-400 uppercase pt-1"
             >
               IDEAS &nbsp;/&nbsp; STRATEGY &nbsp;/&nbsp; DESIGN
-            </motion.div>
-
-            {/* Mobile Top-Right Vertical Text Hook */}
-            <motion.div
-              initial={{ opacity: 0, x: 10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="lg:hidden border-l border-white/30 pl-2.5 space-y-0.5 font-mono-spec text-[9px] tracking-[0.2em] text-zinc-400 uppercase leading-tight"
-            >
-              <div>BRANDS</div>
-              <div>WEBSITES</div>
-              <div>APPS</div>
-              <div>EXPERIENCES</div>
             </motion.div>
           </div>
 
@@ -194,29 +181,7 @@ export default function Hero({ onOpenReel, onCursorEnter, onCursorLeave }) {
           {/* MOBILE HERO VISUAL (NATURAL DOCUMENT FLOW AFTER CTAS WITH CLEAR GAP, HIDDEN ON DESKTOP) */}
           <div className="relative w-full mx-auto max-w-[680px] h-[360px] xs:h-[440px] sm:h-[520px] lg:hidden z-1 overflow-hidden flex items-end justify-center mb-1">
             <div className="relative w-full h-full">
-              {/* Top Left Editorial Overlay on Mobile Image */}
-              <div className="absolute top-3 left-3 sm:left-5 z-10 space-y-1">
-                <div className="w-6 h-[1.5px] bg-white/70 mb-2" />
-                <div className="font-mono-spec text-[9px] sm:text-[10px] tracking-[0.2em] text-zinc-300 uppercase leading-tight">
-                  <div>CREATIVE</div>
-                  <div>FOR A</div>
-                  <div>BRIGHTER</div>
-                  <div>TOMORROW</div>
-                </div>
-              </div>
-
-              {/* Bottom Right Editorial Overlay on Mobile Image */}
-              <div className="absolute bottom-2 right-3 sm:right-5 z-10 flex items-start space-x-2">
-                <div className="w-[1.5px] h-12 bg-white/50" />
-                <div className="font-mono-spec text-[9px] sm:text-[10px] text-zinc-300 space-y-0.5 uppercase tracking-wider">
-                  <div className="text-white text-xs sm:text-sm font-bold">01</div>
-                  <div>STRATEGY</div>
-                  <div>DESIGN</div>
-                  <div>DEVELOPMENT</div>
-                </div>
-              </div>
-
-              {/* Main Image (Significantly Enlarged & Scaled) */}
+              {/* Main Image */}
               <img
                 src="/images/hero_exact.webp"
                 alt="KROMA Hero Visual"
