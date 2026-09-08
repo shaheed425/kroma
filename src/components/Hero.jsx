@@ -6,7 +6,7 @@ export default function Hero({ onOpenReel, onCursorEnter, onCursorLeave }) {
   return (
     <section
       id="hero"
-      className="relative w-full bg-white text-black select-none font-sans pt-[clamp(95px,12vw,115px)] pb-6 px-[clamp(20px,5vw,32px)] lg:min-h-screen lg:flex lg:flex-col lg:justify-between lg:px-16 lg:pt-28 lg:pb-12 overflow-hidden flex flex-col justify-start lg:justify-between border-b border-black/10"
+      className="relative w-full bg-white text-black select-none font-sans pt-[clamp(95px,12vw,115px)] pb-24 sm:pb-28 px-[clamp(20px,5vw,32px)] lg:min-h-screen lg:flex lg:flex-col lg:justify-between lg:px-16 lg:pt-40 lg:pb-12 overflow-hidden flex flex-col justify-start lg:justify-between border-b border-black/10"
     >
       {/* 1. MAIN HERO LAYOUT (NATURAL DOCUMENT FLOW ON MOBILE, GRID ON DESKTOP) */}
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center lg:my-auto relative z-10">
@@ -14,8 +14,8 @@ export default function Hero({ onOpenReel, onCursorEnter, onCursorLeave }) {
         {/* LEFT COLUMN: EDITORIAL TYPOGRAPHY & CTAs */}
         <div className="lg:col-span-7 flex flex-col justify-center z-20">
 
-          {/* Top Tagline / Eyebrow Row */}
-          <div className="flex items-start justify-between mb-[clamp(14px,3vw,22px)]">
+          {/* Top Tagline / Eyebrow Row (Hidden on Mobile) */}
+          <div className="hidden sm:flex items-start justify-between mb-[clamp(14px,3vw,22px)]">
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
@@ -211,7 +211,7 @@ export default function Hero({ onOpenReel, onCursorEnter, onCursorLeave }) {
       </div>
 
       {/* DESKTOP RIGHT SIDE HERO VISUAL */}
-      <div className="hidden lg:flex absolute right-0 bottom-0 top-0 w-[55%] h-full z-[1] pointer-events-none overflow-hidden items-center justify-end">
+      <div className="hidden lg:flex absolute right-0 bottom-0 top-28 lg:top-32 w-[55%] h-[calc(100%-110px)] z-[1] pointer-events-none overflow-hidden items-center justify-end">
         <div className="relative w-full h-full max-w-[950px]">
           <img
             src="/images/hero_exact.webp"

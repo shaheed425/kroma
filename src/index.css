@@ -33,6 +33,31 @@
 .font-mono-spec {
   font-family: 'Space Grotesk', monospace;
 }
+.font-ivypresto, .font-ivy {
+  font-family: 'IvyPresto Display', 'IvyPresto', 'IvyPresto Headline', 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+}
+
+/* Mobile Bottom Floating Dock Navigation Bar */
+.mobile-dock-nav {
+  position: fixed !important;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px)) !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: min(calc(100vw - 32px), 360px) !important;
+  z-index: 9999 !important;
+}
+
+@media (min-width: 1024px) {
+  .mobile-dock-nav {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .mobile-dock-nav {
+    display: flex !important;
+  }
+}
 
 /* Lenis smooth scrolling rules */
 html.lenis, html.lenis body {

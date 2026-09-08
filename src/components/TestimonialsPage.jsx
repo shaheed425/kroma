@@ -44,12 +44,12 @@ export default function TestimonialsPage({ onClose }) {
             <span>CLIENT STORIES ARCHIVE</span>
           </span>
 
-          <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-black uppercase tracking-tight leading-none">
+          <h1 className="font-ivypresto text-4xl sm:text-6xl lg:text-7xl font-bold text-black uppercase tracking-tight leading-none">
             TRUSTED BY <br />
             LEADERS<span className="text-black">.</span>
           </h1>
 
-          <p className="font-sans text-sm sm:text-base text-zinc-600 font-normal leading-relaxed max-w-xl">
+          <p className="font-ivypresto text-base sm:text-lg text-zinc-600 font-normal leading-relaxed max-w-xl">
             A collection of experiences, partnerships, and measurable outcomes from the brands and visionaries we've partnered with.
           </p>
         </div>
@@ -74,7 +74,7 @@ export default function TestimonialsPage({ onClose }) {
                 </div>
 
                 {/* Quote Text */}
-                <p className="font-sans text-sm sm:text-base text-zinc-800 leading-relaxed font-medium pt-1">
+                <p className="font-ivypresto text-base sm:text-lg text-zinc-800 leading-relaxed font-normal pt-1">
                   “{item.quote}”
                 </p>
               </div>
@@ -85,10 +85,10 @@ export default function TestimonialsPage({ onClose }) {
                   <img src={item.avatar} alt={item.name} className="w-full h-full object-cover" />
                 </div>
                 <div className="space-y-0.5">
-                  <h4 className="font-sans text-sm font-black text-black uppercase tracking-wider">
+                  <h4 className="font-ivypresto text-sm font-bold text-black uppercase tracking-wider">
                     {item.name}
                   </h4>
-                  <p className="font-sans text-xs text-black font-semibold">
+                  <p className="font-ivypresto text-xs text-black font-semibold">
                     <span>{item.role}</span>
                   </p>
                   <p className="font-mono-spec text-[10px] text-zinc-600 uppercase">

@@ -104,15 +104,15 @@ export default function TestimonialsSection({ onOpenTestimonialsPage }) {
               <span>TESTIMONIALS</span>
             </span>
 
-            <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-black text-black tracking-tight uppercase leading-tight">
+            <h2 className="font-ivypresto text-3xl sm:text-5xl lg:text-6xl font-bold text-black tracking-tight uppercase leading-tight">
               TRUSTED BY LEADERS
             </h2>
 
-            <p className="font-display text-lg sm:text-2xl lg:text-3xl font-black text-zinc-800 tracking-tight uppercase leading-snug">
+            <p className="font-ivypresto text-lg sm:text-2xl lg:text-3xl font-bold text-zinc-800 tracking-tight uppercase leading-snug">
               FROM BRANDS THAT REFUSE TO BLEND IN<span className="text-black">.</span>
             </p>
 
-            <p className="font-sans text-xs sm:text-sm text-zinc-600 font-normal leading-relaxed max-w-md mx-auto pt-0.5">
+            <p className="font-ivypresto text-sm sm:text-base text-zinc-600 font-normal leading-relaxed max-w-md mx-auto pt-0.5">
               Real partnerships. Real results. See why ambitious brands choose Kroma.
             </p>
           </div>
@@ -129,13 +129,13 @@ export default function TestimonialsSection({ onOpenTestimonialsPage }) {
                 className="space-y-4 max-w-xl mx-auto"
               >
                 {/* Active Testimonial Quote */}
-                <blockquote className="font-sans text-base sm:text-lg lg:text-xl font-bold text-black leading-relaxed tracking-tight">
+                <blockquote className="font-ivypresto text-base sm:text-lg lg:text-xl font-bold text-black leading-relaxed tracking-tight">
                   “ {activeTestimonial.quote} ”
                 </blockquote>
 
                 {/* Active Client Metadata */}
-                <div className="space-y-1 font-sans">
-                  <div className="text-xs sm:text-sm font-black uppercase text-black tracking-wider">
+                <div className="space-y-1 font-ivypresto">
+                  <div className="text-xs sm:text-sm font-bold uppercase text-black tracking-wider">
                     — <span className="text-black">{activeTestimonial.name}</span>
                   </div>
                   <div className="text-xs text-zinc-600 font-semibold">

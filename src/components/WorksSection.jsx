@@ -131,12 +131,12 @@ export default function WorksSection() {
           {/* LEFT SIDE: EDITORIAL HEADING & DESCRIPTION */}
           <div className="lg:col-span-4 flex flex-col justify-between space-y-5">
             <div className="space-y-3.5">
-              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-black tracking-tight uppercase leading-tight">
+              <h2 className="font-ivypresto text-3xl sm:text-4xl lg:text-5xl font-bold text-black tracking-tight uppercase leading-tight">
                 FEATURED <br />
                 CAMPAIGNS<span className="text-black">.</span>
               </h2>
 
-              <p className="font-sans text-xs sm:text-sm text-zinc-600 font-normal leading-relaxed max-w-sm">
+              <p className="font-ivypresto text-sm sm:text-base text-zinc-600 font-normal leading-relaxed max-w-sm">
                 Strategic campaigns, digital experiences, and brand stories crafted to move people, build brands, and drive real results.
               </p>
             </div>
@@ -145,7 +145,7 @@ export default function WorksSection() {
             <div className="pt-1">
               <a
                 href="#works"
-                className="inline-flex items-center space-x-2 font-sans text-xs font-bold uppercase tracking-wider text-black border-b border-black/30 pb-0.5 hover:text-zinc-700 hover:border-black transition-colors group"
+                className="inline-flex items-center space-x-2 font-ivypresto text-xs font-bold uppercase tracking-wider text-black border-b border-black/30 pb-0.5 hover:text-zinc-700 hover:border-black transition-colors group"
               >
                 <span>VIEW ALL PROJECTS</span>
                 <ArrowRight size={14} className="text-black group-hover:translate-x-1 transition-transform" />
@@ -196,7 +196,7 @@ export default function WorksSection() {
                       {/* Bottom Title & Square Arrow Overlay Inside Card */}
                       <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col justify-end space-y-2 z-10">
                         <div className="flex items-end justify-between space-x-2">
-                          <h3 className="font-display text-base sm:text-lg font-black text-white uppercase tracking-tight leading-snug drop-shadow-md group-hover:text-white transition-colors">
+                          <h3 className="font-ivypresto text-base sm:text-lg font-bold text-white uppercase tracking-tight leading-snug drop-shadow-md group-hover:text-white transition-colors">
                             {project.title}
                           </h3>
 

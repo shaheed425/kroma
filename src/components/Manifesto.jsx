@@ -46,9 +46,9 @@ export default function Manifesto({ onCursorEnter, onCursorLeave }) {
 
         {/* Scroll-Linked Kinetic Quote Highlight */}
         <div ref={textRef} className="py-4 sm:py-8">
-          <div className="font-garamond italic text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black leading-[1.1] tracking-tight font-medium">
+          <div className="font-ivypresto italic text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-black leading-[1.1] tracking-tight font-normal">
             "Standing out isn't a lucky accident<span className="text-black not-italic">.</span>{' '}
-            <span className="font-syne not-italic font-black uppercase text-black">
+            <span className="font-ivypresto not-italic font-bold uppercase text-black">
               It's a strategy.
             </span>"
           </div>
@@ -61,13 +61,13 @@ export default function Manifesto({ onCursorEnter, onCursorLeave }) {
             <span className="font-mono-spec text-xs text-black font-bold tracking-widest uppercase">
               ABOUT KROMA MEDIA
             </span>
-            <h3 className="font-syne text-2xl sm:text-3xl font-black text-black tracking-tight uppercase">
+            <h3 className="font-ivypresto text-3xl sm:text-4xl font-bold text-black tracking-tight leading-snug">
               We don’t just make noise — we build narratives that stick.
             </h3>
-            <p className="font-garamond text-lg sm:text-xl text-zinc-700 font-normal leading-relaxed">
+            <p className="font-ivypresto text-lg sm:text-xl text-zinc-700 font-normal leading-relaxed">
               Kroma Media is a full-service marketing, PR, and advertising agency for brands that refuse to blend in. We fuse bold storytelling with data-backed strategy, turning passive scrollers into loyal customers — across digital and traditional landscapes alike.
             </p>
-            <p className="font-garamond text-lg sm:text-xl text-zinc-700 font-normal leading-relaxed">
+            <p className="font-ivypresto text-lg sm:text-xl text-zinc-700 font-normal leading-relaxed">
               Every brand has a story. Most tell it quietly. We help you own it — loudly, consistently, and profitably.
             </p>
           </div>

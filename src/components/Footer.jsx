@@ -44,10 +44,10 @@ export default function Footer({ onCursorEnter, onCursorLeave }) {
             READY TO STOP BLENDING IN?
           </span>
 
-          <h2 className="font-syne text-3xl sm:text-5xl lg:text-6xl font-extrabold uppercase leading-[0.9] tracking-tighter text-black">
+          <h2 className="font-ivypresto text-3xl sm:text-5xl lg:text-6xl font-bold uppercase leading-[0.9] tracking-tighter text-black">
             LET'S TALK<br />
-            <span className="font-garamond italic font-normal text-zinc-700">START A CONVERSATION</span>
-            <span className="text-black font-sans">.</span>
+            <span className="font-ivypresto italic font-normal text-zinc-700">START A CONVERSATION</span>
+            <span className="text-black">.</span>
           </h2>
         </div>
 

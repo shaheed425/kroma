@@ -147,12 +147,12 @@ export default function ServicesSection() {
           className="flex flex-col md:flex-row md:items-end justify-between border-b border-black/10 pb-8 gap-4"
         >
           <div>
-            <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-black text-black tracking-tight uppercase leading-tight">
+            <h2 className="font-ivypresto text-3xl sm:text-4xl lg:text-5xl font-bold text-black tracking-tight uppercase leading-tight">
               WE MAKE BRANDS <br className="hidden sm:inline" />
               HARD TO IGNORE<span className="text-black">.</span>
             </h2>
           </div>
-          <div className="max-w-md font-sans text-sm text-zinc-600 font-normal leading-relaxed">
+          <div className="max-w-md font-ivypresto text-base text-zinc-600 font-normal leading-relaxed">
             Strategy, creativity, media and performance — connected into a single synchronized growth engine.
           </div>
         </motion.div>
@@ -181,16 +181,16 @@ export default function ServicesSection() {
 
                 {/* Title & Headline (Clean Bold Editorial Sans-Serif) */}
                 <div className="space-y-3">
-                  <h3 className="font-sans text-3xl sm:text-4xl font-black text-black uppercase tracking-tight leading-none">
+                  <h3 className="font-ivypresto text-3xl sm:text-4xl font-bold text-black uppercase tracking-tight leading-none">
                     {activeService.title}
                   </h3>
-                  <p className="font-sans text-lg sm:text-xl font-extrabold text-black leading-snug">
+                  <p className="font-ivypresto text-lg sm:text-xl font-bold text-black leading-snug">
                     {activeService.headline}
                   </p>
                 </div>
 
                 {/* Description */}
-                <p className="font-sans text-sm text-zinc-700 leading-relaxed font-normal">
+                <p className="font-ivypresto text-base text-zinc-700 leading-relaxed font-normal">
                   {activeService.description}
                 </p>
 
@@ -199,7 +199,7 @@ export default function ServicesSection() {
                   <p className="font-mono-spec text-[10px] font-bold text-black uppercase tracking-widest">
                     CORE CAPABILITIES
                   </p>
-                  <p className="font-sans text-xs font-bold text-zinc-700 tracking-wider leading-relaxed">
+                  <p className="font-ivypresto text-xs font-bold text-zinc-700 tracking-wider leading-relaxed">
                     {activeService.capabilitiesLine}
                   </p>
                 </div>

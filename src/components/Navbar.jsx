@@ -108,8 +108,8 @@ export default function Navbar({ onCursorEnter, onCursorLeave }) {
         </div>
       </header>
 
-      {/* BOTTOM FLOATING IPHONE-STYLE DOCK NAVIGATION BAR (MOBILE/RESPONSIVE ONLY) */}
-      <div className="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-40 bg-black/90 backdrop-blur-xl border border-white/20 text-white rounded-full px-2.5 sm:px-4 py-1.5 sm:py-2 shadow-2xl flex md:hidden items-center justify-center space-x-1.5 sm:space-x-3 font-sans select-none tracking-wider">
+      {/* BOTTOM FLOATING IPHONE-STYLE DOCK NAVIGATION BAR (ALWAYS VISIBLE ON ALL MOBILE DEVICES INCLUDING IPHONE 15 PRO & 16 PRO) */}
+      <div className="mobile-dock-nav h-[58px] bg-black/95 backdrop-blur-xl border border-white/20 text-white rounded-full p-1.5 shadow-2xl items-center justify-between font-sans select-none pointer-events-auto">
         {DOCK_NAV_ITEMS.map((item) => {
           const isActive = activeSection === item.name;
           const IconComp = item.icon;
@@ -119,14 +119,19 @@ export default function Navbar({ onCursorEnter, onCursorLeave }) {
               key={item.name}
               href={item.href}
               onClick={() => setActiveSection(item.name)}
-              className={`flex flex-col items-center justify-center px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full transition-all duration-300 group relative ${
+              className={`flex-1 h-full flex flex-col items-center justify-center rounded-full transition-all duration-300 group relative ${
                 isActive
-                  ? 'bg-zinc-800 text-white font-extrabold shadow-md scale-105 border border-white/20'
+                  ? 'bg-zinc-800 text-white font-extrabold shadow-md border border-white/20'
                   : 'text-zinc-400 hover:text-white hover:bg-white/10'
               }`}
             >
-              <IconComp size={16} className={`mb-0.5 sm:mb-1 transition-transform group-hover:scale-110 ${isActive ? 'text-white' : 'text-zinc-400 group-hover:text-white'}`} />
-              <span className="text-[9px] sm:text-[10px] font-mono-spec font-bold uppercase tracking-widest leading-none">
+              <IconComp
+                size={16}
+                className={`transition-transform group-hover:scale-110 mb-0.5 ${
+                  isActive ? 'text-white' : 'text-zinc-400 group-hover:text-white'
+                }`}
+              />
+              <span className="text-[9px] font-mono-spec font-bold uppercase tracking-wider leading-none whitespace-nowrap">
                 {item.name}
               </span>
             </a>
