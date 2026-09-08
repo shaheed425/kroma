@@ -76,11 +76,10 @@ export default function Manifesto({ onCursorEnter, onCursorLeave }) {
           <div className="lg:col-span-3 border border-black/10 bg-zinc-50 p-2 relative group overflow-hidden shadow-sm">
             <div className="aspect-[3/4] overflow-hidden relative">
               <img
-                src="/images/work_2.webp"
-                alt="KROMA Brutalist Monolith Campaign"
-                className="w-full h-full object-cover contrast-105 group-hover:scale-105 transition-all duration-700"
+                src="/images/manifesto_bw_editorial.png"
+                alt="KROMA High Fashion Editorial B&W Visual"
+                className="w-full h-full object-cover grayscale contrast-125 brightness-95 group-hover:scale-105 transition-all duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-white/70 via-transparent to-transparent" />
             </div>
             <div className="p-3 font-mono-spec text-[11px] text-zinc-600">
               <p className="text-black font-bold uppercase">BRAND NARRATIVE AGENCY</p>
