@@ -36,32 +36,32 @@ export default function Footer({ onCursorEnter, onCursorLeave }) {
   };
 
   return (
-    <footer id="contact" className="py-28 px-6 md:px-12 lg:px-16 bg-[#0A0A0B] border-t border-black/10 text-white relative">
-      <div className="max-w-7xl mx-auto space-y-20">
-        {/* Giant Expressive Header */}
+    <footer id="contact" className="py-28 px-6 md:px-12 lg:px-16 bg-white border-t border-black/10 text-black relative">
+      <div className="max-w-7xl mx-auto space-y-16 sm:space-y-20">
+        {/* Expressive Editorial Header */}
         <div className="space-y-4">
-          <span className="font-mono-spec text-xs sm:text-sm text-[#E63946] font-bold tracking-widest uppercase block">
+          <span className="font-mono-spec text-xs sm:text-sm text-black font-bold tracking-widest uppercase block">
             READY TO STOP BLENDING IN?
           </span>
 
-          <h2 className="font-syne text-5xl sm:text-7xl lg:text-9xl font-extrabold uppercase leading-[0.85] tracking-tighter">
+          <h2 className="font-syne text-3xl sm:text-5xl lg:text-6xl font-extrabold uppercase leading-[0.9] tracking-tighter text-black">
             LET'S TALK<br />
-            <span className="font-garamond italic font-light text-zinc-300">START A CONVERSATION</span>
-            <span className="text-[#E63946] font-sans">.</span>
+            <span className="font-garamond italic font-normal text-zinc-700">START A CONVERSATION</span>
+            <span className="text-black font-sans">.</span>
           </h2>
         </div>
 
         {/* Asymmetric Form & Info Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-8 border-t border-white/10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-8 border-t border-black/10">
           {/* Left Column: Direct Interactive Inquiry Form */}
-          <div className="lg:col-span-7 bg-zinc-950 p-8 border border-white/15 shadow-2xl space-y-6">
+          <div className="lg:col-span-7 bg-zinc-50 p-6 sm:p-8 border border-black/15 shadow-sm space-y-6">
             
 
             {formSubmitted ? (
-              <div className="p-8 border border-[#E63946] bg-[#E63946]/10 text-center space-y-3">
-                <CheckCircle2 size={32} className="text-[#E63946] mx-auto" />
-                <h4 className="font-syne text-2xl font-bold uppercase">BRIEF RECEIVED</h4>
-                <p className="font-mono-spec text-xs text-zinc-300">
+              <div className="p-8 border border-black bg-black/5 text-center space-y-3">
+                <CheckCircle2 size={32} className="text-black mx-auto" />
+                <h4 className="font-syne text-2xl font-bold uppercase text-black">BRIEF RECEIVED</h4>
+                <p className="font-mono-spec text-xs text-zinc-700">
                   Our strategic partner team will review your brief within 24 hours.
                 </p>
               </div>
@@ -69,35 +69,35 @@ export default function Footer({ onCursorEnter, onCursorLeave }) {
               <form onSubmit={handleSubmit} className="space-y-6 font-mono-spec text-xs">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-zinc-400 uppercase tracking-widest">YOUR NAME / TITLE *</label>
+                    <label className="text-zinc-700 uppercase tracking-widest font-bold">YOUR NAME / TITLE *</label>
                     <input
                       type="text"
                       required
                       placeholder="e.g. Alexandra Vance // VP Marketing"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full bg-zinc-900 border border-white/15 p-3.5 text-white focus:outline-none focus:border-[#E63946] transition-colors"
+                      className="w-full bg-white border border-black/20 p-3.5 text-black focus:outline-none focus:border-black transition-colors"
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-zinc-400 uppercase tracking-widest">EMAIL ADDRESS *</label>
+                    <label className="text-zinc-700 uppercase tracking-widest font-bold">EMAIL ADDRESS *</label>
                     <input
                       type="email"
                       required
                       placeholder="alexandra@brand.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full bg-zinc-900 border border-white/15 p-3.5 text-white focus:outline-none focus:border-[#E63946] transition-colors"
+                      className="w-full bg-white border border-black/20 p-3.5 text-black focus:outline-none focus:border-black transition-colors"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-zinc-400 uppercase tracking-widest">PROJECT INVESTMENT BUDGET</label>
+                  <label className="text-zinc-700 uppercase tracking-widest font-bold">PROJECT INVESTMENT BUDGET</label>
                   <select
                     value={formData.budget}
                     onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                    className="w-full bg-zinc-900 border border-white/15 p-3.5 text-white focus:outline-none focus:border-[#E63946] transition-colors"
+                    className="w-full bg-white border border-black/20 p-3.5 text-black focus:outline-none focus:border-black transition-colors"
                   >
                     <option>$25k - $50k</option>
                     <option>$50k - $100k</option>
@@ -107,14 +107,14 @@ export default function Footer({ onCursorEnter, onCursorLeave }) {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-zinc-400 uppercase tracking-widest">CAMPAIGN OBJECTIVE *</label>
+                  <label className="text-zinc-700 uppercase tracking-widest font-bold">CAMPAIGN OBJECTIVE *</label>
                   <textarea
                     required
                     rows={4}
                     placeholder="Tell us about your brand challenge, campaign timeline, or repositioning goals..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full bg-zinc-900 border border-white/15 p-3.5 text-white focus:outline-none focus:border-[#E63946] transition-colors"
+                    className="w-full bg-white border border-black/20 p-3.5 text-black focus:outline-none focus:border-black transition-colors"
                   />
                 </div>
 
@@ -122,7 +122,7 @@ export default function Footer({ onCursorEnter, onCursorLeave }) {
                   type="submit"
                   onMouseEnter={() => onCursorEnter({ type: 'cta', text: 'SEND' })}
                   onMouseLeave={onCursorLeave}
-                  className="w-full bg-[#E63946] hover:bg-white hover:text-black text-white py-4 font-mono-spec text-xs font-bold uppercase tracking-widest transition-all duration-300 flex items-center justify-center space-x-2"
+                  className="w-full bg-black hover:bg-zinc-800 text-white py-4 font-mono-spec text-xs font-bold uppercase tracking-widest transition-all duration-300 flex items-center justify-center space-x-2 cursor-pointer shadow-sm"
                 >
                   <span>SUBMIT PROJECT INQUIRY</span>
                   <Send size={14} />
@@ -134,41 +134,41 @@ export default function Footer({ onCursorEnter, onCursorLeave }) {
           {/* Right Column: Agency Coordinates & Clocks */}
           <div className="lg:col-span-5 space-y-8 flex flex-col justify-between font-mono-spec">
             <div className="space-y-6">
-              <span className="text-xs text-[#E63946] font-bold tracking-widest uppercase">
+              <span className="text-xs text-black font-bold tracking-widest uppercase">
                 GLOBAL BUREAUS
               </span>
 
               {/* Timezone Clocks */}
-              <div className="space-y-4 pt-2 border-t border-white/10">
-                <div className="flex justify-between items-center py-2 border-b border-white/5">
-                  <span className="text-white font-bold">NEW YORK (HQ)</span>
-                  <span className="text-zinc-400">{clocks.nyc} EST</span>
+              <div className="space-y-4 pt-2 border-t border-black/10">
+                <div className="flex justify-between items-center py-2 border-b border-black/5">
+                  <span className="text-black font-bold">NEW YORK (HQ)</span>
+                  <span className="text-zinc-600 font-semibold">{clocks.nyc} EST</span>
                 </div>
-                <div className="flex justify-between items-center py-2 border-b border-white/5">
-                  <span className="text-white font-bold">LONDON BUREAU</span>
-                  <span className="text-zinc-400">{clocks.lon} GMT</span>
+                <div className="flex justify-between items-center py-2 border-b border-black/5">
+                  <span className="text-black font-bold">LONDON BUREAU</span>
+                  <span className="text-zinc-600 font-semibold">{clocks.lon} GMT</span>
                 </div>
-                <div className="flex justify-between items-center py-2 border-b border-white/5">
-                  <span className="text-white font-bold">TOKYO BUREAU</span>
-                  <span className="text-zinc-400">{clocks.tyo} JST</span>
+                <div className="flex justify-between items-center py-2 border-b border-black/5">
+                  <span className="text-black font-bold">TOKYO BUREAU</span>
+                  <span className="text-zinc-600 font-semibold">{clocks.tyo} JST</span>
                 </div>
               </div>
 
               {/* Direct Channels */}
               <div className="space-y-3 pt-4">
-                <p className="text-xs text-zinc-500 uppercase tracking-widest">DIRECT CHANNELS</p>
-                <a href="mailto:hello@kromamedia.com" className="text-lg text-white hover:text-[#E63946] transition-colors block">
+                <p className="text-xs text-zinc-600 uppercase tracking-widest font-bold">DIRECT CHANNELS</p>
+                <a href="mailto:hello@kromamedia.com" className="text-lg text-black font-bold hover:text-zinc-600 transition-colors block">
                   hello@kromamedia.com
                 </a>
-                <a href="mailto:press@kromamedia.com" className="text-sm text-zinc-400 hover:text-[#E63946] transition-colors block">
+                <a href="mailto:press@kromamedia.com" className="text-sm text-zinc-700 hover:text-black transition-colors block">
                   press@kromamedia.com
                 </a>
-                <p className="text-sm text-zinc-400">+1 (212) 890-4491</p>
+                <p className="text-sm text-zinc-700 font-semibold">+1 (212) 890-4491</p>
               </div>
             </div>
 
             {/* Back to top button */}
-            <div className="pt-6 border-t border-white/10 flex justify-between items-center">
+            <div className="pt-6 border-t border-black/10 flex justify-between items-center">
               <span className="text-[11px] text-zinc-500">
                 © 2026 KROMA MEDIA GROUP LLC. ALL RIGHTS RESERVED.
               </span>
@@ -176,7 +176,7 @@ export default function Footer({ onCursorEnter, onCursorLeave }) {
                 onClick={scrollToTop}
                 onMouseEnter={() => onCursorEnter({ type: 'button', text: 'TOP' })}
                 onMouseLeave={onCursorLeave}
-                className="w-10 h-10 border border-white/20 hover:border-[#E63946] hover:bg-[#E63946] text-white flex items-center justify-center transition-all"
+                className="w-10 h-10 border border-black/20 hover:border-black hover:bg-black hover:text-white text-black flex items-center justify-center transition-all cursor-pointer"
                 title="Back to top"
               >
                 <ArrowUp size={16} />

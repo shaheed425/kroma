@@ -2,16 +2,16 @@
 
 @layer base {
   :root {
-    --color-kroma-white: #F8F8F6;
-    --color-kroma-black: #0A0A0B;
+    --color-kroma-white: #FFFFFF;
+    --color-kroma-black: #000000;
     --color-kroma-surface: #FFFFFF;
     --color-kroma-muted: #66666E;
-    --color-kroma-vermillion: #E63946;
+    --color-kroma-vermillion: #000000;
   }
   
   body {
-    background-color: #F8F8F6;
-    color: #0A0A0B;
+    background-color: #FFFFFF;
+    color: #000000;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     overflow-x: hidden;
   }
@@ -89,14 +89,14 @@ html.lenis, html.lenis body {
   width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #F8F8F6;
+  background: #FFFFFF;
 }
 ::-webkit-scrollbar-thumb {
   background: #18181B;
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #E51B23;
+  background: #000000;
 }
 
 /* Hide scrollbar utility */

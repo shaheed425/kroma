@@ -42,14 +42,14 @@ export default function TestimonialsSection({ onOpenTestimonialsPage }) {
   return (
     <section
       id="testimonials"
-      className="py-20 sm:py-28 px-4 sm:px-8 md:px-12 lg:px-16 bg-black text-white border-b border-white/10 relative overflow-hidden select-none"
+      className="py-20 sm:py-28 px-4 sm:px-8 md:px-12 lg:px-16 bg-white text-black border-b border-black/10 relative overflow-hidden select-none"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
       {/* Subtle Vertical Guide Lines Background Pattern */}
       <div className="absolute inset-0 max-w-7xl mx-auto grid grid-cols-6 sm:grid-cols-12 pointer-events-none opacity-20">
         {[...Array(12)].map((_, i) => (
-          <div key={i} className="border-r border-white/[0.05] h-full" />
+          <div key={i} className="border-r border-black/[0.05] h-full" />
         ))}
       </div>
 
@@ -71,8 +71,8 @@ export default function TestimonialsSection({ onOpenTestimonialsPage }) {
                   onClick={() => handleSelectClient(pos.id)}
                   className={`w-full h-full rounded-xl overflow-hidden border transition-all duration-500 shadow-sm cursor-pointer group relative ${
                     isSelected
-                      ? 'border-2 border-[#B91C1C] ring-4 ring-[#B91C1C]/25 shadow-xl scale-110 opacity-100 z-30'
-                      : 'border-white/15 bg-zinc-900 opacity-65 hover:opacity-100 grayscale-[25%] hover:grayscale-0 hover:scale-105 z-10'
+                      ? 'border-2 border-black ring-4 ring-black/15 shadow-xl scale-110 opacity-100 z-30'
+                      : 'border-black/15 bg-zinc-100 opacity-65 hover:opacity-100 grayscale-[25%] hover:grayscale-0 hover:scale-105 z-10'
                   }`}
                 >
                   <img
@@ -80,12 +80,12 @@ export default function TestimonialsSection({ onOpenTestimonialsPage }) {
                     alt={item.name}
                     className="w-full h-full object-cover contrast-105 transition-transform duration-700 group-hover:scale-105"
                   />
-                  {/* Subtle Red Indicator Dot on Active Portrait */}
+                  {/* Subtle Indicator Dot on Active Portrait */}
                   {isSelected && (
-                    <div className="absolute top-2 right-2 w-2.5 h-2.5 rounded-full bg-[#B91C1C] shadow-sm animate-pulse" />
+                    <div className="absolute top-2 right-2 w-2.5 h-2.5 rounded-full bg-black shadow-sm animate-pulse" />
                   )}
                   {/* Hover Name Badge */}
-                  <span className="absolute bottom-1.5 left-1.5 right-1.5 bg-black/80 backdrop-blur-md text-white text-[9px] font-bold px-1.5 py-0.5 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity text-center truncate">
+                  <span className="absolute bottom-1.5 left-1.5 right-1.5 bg-black/90 backdrop-blur-md text-white text-[9px] font-bold px-1.5 py-0.5 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity text-center truncate">
                     {item.name}
                   </span>
                 </button>
@@ -99,20 +99,20 @@ export default function TestimonialsSection({ onOpenTestimonialsPage }) {
           
           {/* Eyebrow & Main Editorial Headline */}
           <div className="space-y-3">
-            <span className="font-mono-spec text-xs font-bold uppercase tracking-widest text-[#B91C1C] flex items-center justify-center space-x-2">
-              <span className="w-2 h-2 rounded-none bg-[#B91C1C]" />
+            <span className="font-mono-spec text-xs font-bold uppercase tracking-widest text-black flex items-center justify-center space-x-2">
+              <span className="w-2 h-2 rounded-none bg-black" />
               <span>TESTIMONIALS</span>
             </span>
 
-            <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight uppercase leading-tight">
+            <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-black text-black tracking-tight uppercase leading-tight">
               TRUSTED BY LEADERS
             </h2>
 
-            <p className="font-display text-lg sm:text-2xl lg:text-3xl font-black text-zinc-300 tracking-tight uppercase leading-snug">
-              FROM BRANDS THAT REFUSE TO BLEND IN<span className="text-[#B91C1C]">.</span>
+            <p className="font-display text-lg sm:text-2xl lg:text-3xl font-black text-zinc-800 tracking-tight uppercase leading-snug">
+              FROM BRANDS THAT REFUSE TO BLEND IN<span className="text-black">.</span>
             </p>
 
-            <p className="font-sans text-xs sm:text-sm text-zinc-400 font-normal leading-relaxed max-w-md mx-auto pt-0.5">
+            <p className="font-sans text-xs sm:text-sm text-zinc-600 font-normal leading-relaxed max-w-md mx-auto pt-0.5">
               Real partnerships. Real results. See why ambitious brands choose Kroma.
             </p>
           </div>
@@ -129,17 +129,17 @@ export default function TestimonialsSection({ onOpenTestimonialsPage }) {
                 className="space-y-4 max-w-xl mx-auto"
               >
                 {/* Active Testimonial Quote */}
-                <blockquote className="font-sans text-base sm:text-lg lg:text-xl font-bold text-white leading-relaxed tracking-tight">
+                <blockquote className="font-sans text-base sm:text-lg lg:text-xl font-bold text-black leading-relaxed tracking-tight">
                   “ {activeTestimonial.quote} ”
                 </blockquote>
 
                 {/* Active Client Metadata */}
                 <div className="space-y-1 font-sans">
-                  <div className="text-xs sm:text-sm font-black uppercase text-white tracking-wider">
-                    — <span className="text-[#B91C1C]">{activeTestimonial.name}</span>
+                  <div className="text-xs sm:text-sm font-black uppercase text-black tracking-wider">
+                    — <span className="text-black">{activeTestimonial.name}</span>
                   </div>
-                  <div className="text-xs text-zinc-400 font-semibold">
-                    {activeTestimonial.role} // <span className="text-white font-bold">{activeTestimonial.company}</span>
+                  <div className="text-xs text-zinc-600 font-semibold">
+                    {activeTestimonial.role} // <span className="text-black font-bold">{activeTestimonial.company}</span>
                   </div>
                 </div>
               </motion.div>
@@ -156,8 +156,8 @@ export default function TestimonialsSection({ onOpenTestimonialsPage }) {
                   onClick={() => handleSelectClient(idx)}
                   className={`w-10 h-13 rounded-lg overflow-hidden border transition-all cursor-pointer ${
                     isSelected
-                      ? 'border-2 border-[#B91C1C] scale-110 opacity-100 shadow-md ring-2 ring-[#B91C1C]/30'
-                      : 'border-white/15 opacity-50 hover:opacity-100'
+                      ? 'border-2 border-black scale-110 opacity-100 shadow-md ring-2 ring-black/20'
+                      : 'border-black/15 opacity-50 hover:opacity-100'
                   }`}
                 >
                   <img src={item.avatar} alt={item.name} className="w-full h-full object-cover" />
@@ -170,7 +170,7 @@ export default function TestimonialsSection({ onOpenTestimonialsPage }) {
           <div className="pt-3 flex justify-center z-30">
             <button
               onClick={onOpenTestimonialsPage}
-              className="flex items-center space-x-2.5 bg-[#B91C1C] hover:bg-[#991B1B] text-white px-7 py-3.5 rounded-md font-sans text-xs sm:text-sm font-bold tracking-wide transition-all duration-300 shadow-md hover:shadow-lg hover:scale-[1.02] cursor-pointer group"
+              className="flex items-center space-x-2.5 bg-black hover:bg-zinc-800 text-white px-7 py-3.5 rounded-md font-sans text-xs sm:text-sm font-bold tracking-wide transition-all duration-300 shadow-md hover:shadow-lg hover:scale-[1.02] cursor-pointer group"
             >
               <span>READ SUCCESS STORIES</span>
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />

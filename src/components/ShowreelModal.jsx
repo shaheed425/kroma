@@ -15,7 +15,7 @@ export default function ShowreelModal({ isOpen, onClose }) {
           {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-8 right-8 z-50 flex items-center space-x-2 text-white/70 hover:text-[#E63946] transition-colors font-mono-spec text-xs uppercase tracking-widest"
+            className="absolute top-8 right-8 z-50 flex items-center space-x-2 text-white/70 hover:text-white transition-colors font-mono-spec text-xs uppercase tracking-widest"
           >
             <span>CLOSE SHOWREEL</span>
             <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center">
@@ -33,16 +33,16 @@ export default function ShowreelModal({ isOpen, onClose }) {
             {/* Top Reel Header */}
             <div className="relative z-10 flex justify-between items-center font-mono-spec text-xs text-zinc-400">
               <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 rounded-full bg-[#E63946] animate-ping" />
+                <span className="w-2 h-2 rounded-full bg-white animate-ping" />
                 <span className="text-white font-bold tracking-widest uppercase">KROMA MEDIA // REEL 2026</span>
               </div>
-              <span className="hidden sm:block text-zinc-500 font-mono-spec">4K ULTRA HD • COLOR GRADE VERMILLION</span>
+              <span className="hidden sm:block text-zinc-500 font-mono-spec">4K ULTRA HD • MONOCHROME GRADE</span>
             </div>
 
             {/* Center Play Graphic */}
             <div className="relative z-10 flex flex-col items-center justify-center my-auto space-y-4">
-              <div className="w-20 h-20 rounded-full border border-white/30 bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-2xl hover:scale-110 hover:border-[#E63946] transition-all cursor-pointer">
-                <Play size={32} className="ml-1 text-[#E63946]" />
+              <div className="w-20 h-20 rounded-full border border-white/30 bg-white/10 backdrop-blur-md flex items-center justify-center text-white shadow-2xl hover:scale-110 hover:border-white transition-all cursor-pointer">
+                <Play size={32} className="ml-1 text-white" />
               </div>
               <p className="font-syne text-2xl font-bold tracking-tight text-white uppercase text-center">
                 WE DON'T JUST MAKE NOISE.<br />
@@ -55,11 +55,11 @@ export default function ShowreelModal({ isOpen, onClose }) {
               <div className="flex items-center space-x-4">
                 <span>00:42 / 02:15</span>
                 <div className="w-32 sm:w-64 h-1 bg-white/20 rounded-full overflow-hidden">
-                  <div className="w-1/3 h-full bg-[#E63946]" />
+                  <div className="w-1/3 h-full bg-white" />
                 </div>
               </div>
               <div className="flex items-center space-x-2 text-zinc-300">
-                <Volume2 size={14} className="text-[#E63946]" />
+                <Volume2 size={14} className="text-white" />
                 <span>STEREO AUDIOPHILE SOUND</span>
               </div>
             </div>

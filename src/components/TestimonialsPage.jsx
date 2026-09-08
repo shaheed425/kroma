@@ -10,16 +10,16 @@ export default function TestimonialsPage({ onClose }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed inset-0 z-50 bg-black text-white overflow-y-auto min-h-screen select-none font-sans"
+      className="fixed inset-0 z-50 bg-white text-black overflow-y-auto min-h-screen select-none font-sans"
     >
       {/* TOP DEDICATED PAGE NAVIGATION BAR */}
-      <div className="sticky top-0 z-40 bg-black/90 backdrop-blur-md border-b border-white/10 px-6 md:px-12 py-4">
+      <div className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-black/10 px-6 md:px-12 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <span className="font-syne text-xl font-extrabold uppercase text-white">
+            <span className="font-syne text-xl font-extrabold uppercase text-black">
               KROMA
             </span>
-            <span className="font-mono-spec text-xs font-bold text-[#B91C1C] uppercase tracking-widest">
+            <span className="font-mono-spec text-xs font-bold text-black uppercase tracking-widest">
               // CLIENT STORIES
             </span>
           </div>
@@ -27,7 +27,7 @@ export default function TestimonialsPage({ onClose }) {
           {/* Clean Rectangular Back Button */}
           <button
             onClick={onClose}
-            className="flex items-center space-x-2 px-4 py-2 rounded-md border border-white/20 bg-zinc-900 hover:bg-[#B91C1C] hover:border-[#B91C1C] text-white font-sans text-xs font-bold uppercase transition-all shadow-sm cursor-pointer group"
+            className="flex items-center space-x-2 px-4 py-2 rounded-md border border-black/20 bg-zinc-100 hover:bg-black hover:border-black hover:text-white text-black font-sans text-xs font-bold uppercase transition-all shadow-sm cursor-pointer group"
           >
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
             <span>BACK TO HOME</span>
@@ -39,17 +39,17 @@ export default function TestimonialsPage({ onClose }) {
       <div className="py-16 sm:py-24 px-6 md:px-12 lg:px-16 max-w-7xl mx-auto space-y-12">
         
         <div className="space-y-4 max-w-3xl">
-          <span className="font-mono-spec text-xs text-[#B91C1C] font-bold tracking-widest uppercase flex items-center space-x-2">
-            <span className="w-2 h-2 rounded-none bg-[#B91C1C]" />
+          <span className="font-mono-spec text-xs text-black font-bold tracking-widest uppercase flex items-center space-x-2">
+            <span className="w-2 h-2 rounded-none bg-black" />
             <span>CLIENT STORIES ARCHIVE</span>
           </span>
 
-          <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight leading-none">
+          <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-black uppercase tracking-tight leading-none">
             TRUSTED BY <br />
-            LEADERS<span className="text-[#B91C1C]">.</span>
+            LEADERS<span className="text-black">.</span>
           </h1>
 
-          <p className="font-sans text-sm sm:text-base text-zinc-400 font-normal leading-relaxed max-w-xl">
+          <p className="font-sans text-sm sm:text-base text-zinc-600 font-normal leading-relaxed max-w-xl">
             A collection of experiences, partnerships, and measurable outcomes from the brands and visionaries we've partnered with.
           </p>
         </div>
@@ -62,36 +62,36 @@ export default function TestimonialsPage({ onClose }) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: idx * 0.08 }}
-              className="bg-zinc-950 border border-white/15 p-6 sm:p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-6 group border-t-4 border-t-[#B91C1C]"
+              className="bg-white border border-black/15 p-6 sm:p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-6 group border-t-4 border-t-black"
             >
               <div className="space-y-4">
                 {/* Category Badge & Industry Tag */}
-                <div className="flex items-center justify-between text-[11px] font-mono-spec font-bold uppercase tracking-wider text-zinc-400 border-b border-white/10 pb-3">
-                  <span className="text-[#B91C1C] bg-[#B91C1C]/15 px-2.5 py-1 rounded-sm">
+                <div className="flex items-center justify-between text-[11px] font-mono-spec font-bold uppercase tracking-wider text-zinc-600 border-b border-black/10 pb-3">
+                  <span className="text-black bg-black/10 px-2.5 py-1 rounded-sm">
                     {item.category}
                   </span>
                   <span>{item.industry}</span>
                 </div>
 
                 {/* Quote Text */}
-                <p className="font-sans text-sm sm:text-base text-zinc-200 leading-relaxed font-medium pt-1">
+                <p className="font-sans text-sm sm:text-base text-zinc-800 leading-relaxed font-medium pt-1">
                   “{item.quote}”
                 </p>
               </div>
 
               {/* Client Info & Avatar Footer */}
-              <div className="flex items-center space-x-4 pt-4 border-t border-white/10">
-                <div className="w-12 h-12 rounded-lg overflow-hidden border border-white/15 shrink-0 bg-zinc-900">
+              <div className="flex items-center space-x-4 pt-4 border-t border-black/10">
+                <div className="w-12 h-12 rounded-lg overflow-hidden border border-black/15 shrink-0 bg-zinc-100">
                   <img src={item.avatar} alt={item.name} className="w-full h-full object-cover" />
                 </div>
                 <div className="space-y-0.5">
-                  <h4 className="font-sans text-sm font-black text-white uppercase tracking-wider">
+                  <h4 className="font-sans text-sm font-black text-black uppercase tracking-wider">
                     {item.name}
                   </h4>
-                  <p className="font-sans text-xs text-zinc-400 font-semibold">
-                    <span className="text-[#B91C1C]">{item.role}</span>
+                  <p className="font-sans text-xs text-black font-semibold">
+                    <span>{item.role}</span>
                   </p>
-                  <p className="font-mono-spec text-[10px] text-zinc-400 uppercase">
+                  <p className="font-mono-spec text-[10px] text-zinc-600 uppercase">
                     {item.company}
                   </p>
                 </div>
@@ -102,13 +102,13 @@ export default function TestimonialsPage({ onClose }) {
         </div>
 
         {/* BOTTOM BACK CTA BAR */}
-        <div className="pt-12 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="font-sans text-xs text-zinc-400">
+        <div className="pt-12 border-t border-black/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="font-sans text-xs text-zinc-600 font-bold">
             SHOWCASING 6 VERIFIED AGENCY PARTNERSHIPS
           </div>
           <button
             onClick={onClose}
-            className="flex items-center space-x-2 bg-[#B91C1C] hover:bg-[#991B1B] text-white px-7 py-3.5 rounded-md font-sans text-xs font-bold uppercase tracking-wide transition-all shadow-md cursor-pointer"
+            className="flex items-center space-x-2 bg-black hover:bg-zinc-800 text-white px-7 py-3.5 rounded-md font-sans text-xs font-bold uppercase tracking-wide transition-all shadow-md cursor-pointer"
           >
             <ArrowLeft size={16} />
             <span>RETURN TO HOMEPAGE</span>
